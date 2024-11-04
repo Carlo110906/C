@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    double calificacion;
+
+    // Entrada de la calificacion
+    printf("Introduce la calificacion (0-100): ");
+    scanf("%lf", &calificacion);
+
+    // Clasificación de la calificacion
+    if (calificacion >= 90) {
+        printf("Calificación: A\n");
+    } else if (calificacion >= 80) {
+        printf("Calificación: B\n");
+    } else if (calificacion >= 70) {
+        printf("Calificación: C\n");
+    } else if (calificacion >= 60) {
+        printf("Calificacion: D\n");
+    } else {
+        printf("Calificacion: F\n");
+    }
+
+    return 0;
+}
