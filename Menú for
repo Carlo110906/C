@@ -1,0 +1,61 @@
+#include<stdio.h>
+void Imprimirpares(){
+    //Impresion de numeros pares del 0 al 100
+
+    printf ("Numeros pares del 0 al 100:\n");
+    for ( int i = 0; i <= 100; i+= 2)
+    {
+    printf("%d ",i);
+    }
+    //Salto de linea despues de las instrucciones dadas.
+    printf("\n");
+}
+void Imprimirimpares(){
+    // Impresion de numeros impares del 0 al 100
+    printf("Numeros impares del 0 al 100:\n");
+    for (int i = 1; i <= 100; i+= 2)
+    {
+printf("%d ", i);
+    }
+    //Salto de linea despues de las instrucciones dadas.
+   printf ("\n");
+}
+void Sumaacumulada(){
+    // Suma acumulada de los numeros del 0 al 100
+    int suma = 0;
+    for (int i = 0; i <= 100; i++)
+ suma +=i;
+
+ printf("La suma de los numeros del 0 al 100 es:%d\n", suma);
+}
+void Saliendo(){
+    printf("Saliendo del programa\n");
+}
+int main (){
+int opcion;
+
+//Ciclo que se repite hasta que el usuraio desee salir
+do{
+    printf("\nMenu:\n");
+    printf ("1.Imprimir los numeros pares del 0 al 100: \n");
+    printf("2.Imprimir los numeros impares del  0 al 100: \n");
+    printf("3.Imprimir la suma de los numeros del 0 al 100 : \n");
+    printf("4.Salir: \n");
+    scanf("%d",  &opcion);
+
+//Ejecutamos por medio de un switch los distintos casos
+switch (opcion){
+case 1 : Imprimirpares();
+break;
+case 2 : Imprimirimpares();
+break;
+case 3 : Sumaacumulada();
+break;
+case 4: Saliendo();
+break;
+default:
+printf("Usted no está ingresando un valor no valido.\n");
+}
+}while (opcion!=4);
+return 0;
+}
