@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    double metros;
+    int opcion;
+
+    // Pedir al usuario que ingrese un valor en metros
+    printf("Ingrese un valor en metros: ");
+    scanf("%lf", &metros);
+
+    // Mostrar las opciones de conversión
+    printf("Seleccione la unidad a la que desea convertir:\n");
+    printf("1. Centímetros (cm)\n");
+    printf("2. Milímetros (mm)\n");
+    printf("3. Kilómetros (km)\n");
+    printf("Opción: ");
+    scanf("%d", &opcion);
+
+    // Realizar la conversión según la opción elegida
+    switch (opcion) {
+        case 1:
+            // Convertir a centímetros
+            printf("%.2lf metros son %.2lf centímetros.\n", metros, metros * 100);
+            break;
+        case 2:
+            // Convertir a milímetros
+            printf("%.2lf metros son %.2lf milímetros.\n", metros, metros * 1000);
+            break;
+        case 3:
+            // Convertir a kilómetros
+            printf("%.2lf metros son %.6lf kilómetros.\n", metros, metros / 1000);
+            break;
+        default:
+            printf("Opción no válida.\n");
+            break;
+    }
+
+    return 0;
+}
