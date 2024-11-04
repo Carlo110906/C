@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int opcion;
+    double precio, descuento, precioFinal;
+
+    // Menú de opciones
+    printf("Selecciona el tipo de producto:\n");
+    printf("1. Aparatos Electronicos (10%% de descuento)\n");
+    printf("2. Ropa (5%% de descuento)\n");
+    printf("Opcion: ");
+    scanf("%d", &opcion);
+
+    // Solicitar el precio del producto
+    printf("Introduce el precio del producto: ");
+    scanf("%lf", &precio);
+
+    // Cálculo del descuento segun la opción seleccionada
+    switch (opcion) {
+        case 1: // Aparatos electronicos
+            descuento = precio * 0.10; 
+            precioFinal = precio - descuento;
+            printf("Descuento: %.2lf\n", descuento);
+            printf("Precio final: %.2lf\n", precioFinal);
+            break;
+
+        case 2: // Ropa
+            descuento = precio * 0.05; 
+            precioFinal = precio - descuento;
+            printf("Descuento: %.2lf\n", descuento);
+            printf("Precio final: %.2lf\n", precioFinal);
+            break;
+
+        default:
+            printf("Opcion no valida.\n"); 
+            break;
+    }
+
+    return 0; 
