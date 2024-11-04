@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main (){
+int numero;
+//Peticion de ingreso de datos
+printf ("Favor de ingresar el numero de los cuadrados: ");
+scanf("%d", &numero);
+
+//Declaracion de las dimensiones
+for (int i= 0; i<numero; i++){
+for (int j=0; j<numero; j++);{
+printf("*");
+}
+//Salto de linea
+printf ("\n");
+}
+return o;
+}
