@@ -1,0 +1,30 @@
+#include<stdio.h>
+int main(){
+
+float temperaturas [7][3];
+float suma_diaria, suma_semanal, promedio_diario = 0, promedio_semanal;
+
+//Ingreso de las temperaturas.
+for(int dia = 0; dia <7; dia++){
+printf("Ingrese la temperaturas para el dia %d (vespertino, tarde y noche):\n", dia +1);
+for(int turno= 0; turno<3; turno++){
+printf("Temperatura turno %d:", turno+1);
+scanf ("%f", &temperaturas [dia][turno]);
+}
+}
+//Calcular y mostrar el promedio diario.
+for (int dia= 0; dia< 7; dia) {
+suma_diaria= 0;
+for (int turno= 0; turno<3; turno++){
+suma_diaria+= temperaturas [dia][turno];
+
+}
+promedio_diario= suma_diaria/3;
+printf("El promedio diario para el dia %d: %.2f\n", dia +1, promedio_diario);
+suma_semanal += suma_diaria;
+}
+//Calculo y muestra del promedio semanal.
+promedio_semanal = suma_semanal/21;
+printf( "El promedio es %.2f\n", promedio_semanal);
+return 0;
+}
