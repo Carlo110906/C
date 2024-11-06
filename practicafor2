@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+int inventario[3][3];
+char categorias[3][12] = {"Electronica", "Ropa", "Alimentos"};
+char ubicaciones[3][15] = {"Almacen", "Piso de ventas", "En reparacion"};
+
+// Pedimos al usuario que ingrese los datos de inventario
+for (int categoria = 0; categoria < 3; categoria++) {
+for (int ubicacion = 0; ubicacion < 3; ubicacion++) {
+printf("Ingrese la cantidad de productos para %s en %s: ", categorias[categoria], ubicaciones[ubicacion]);
+scanf("%d", &inventario[categoria][ubicacion]);
+}
+}
+
+// Calculamos el inventario total
+int inventario_total = 0;
+for (int categoria = 0; categoria < 3; categoria++) {
+for (int ubicacion = 0; ubicacion < 3; ubicacion++) {
+inventario_total += inventario[categoria][ubicacion];
+}
+}
+
+// Imprimimos el inventario total
+printf("\nEl inventario total de la tienda es: %d\n", inventario_total);
+
+return 0;
+}
