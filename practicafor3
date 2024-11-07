@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 int main() {
-char horario[5][5][4];
+char horario[5][5][4]; // Cada materia tiene un máximo de 3 caracteres + terminador nulo
 char dias[5][10] = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes"};
 
 // Pedimos al usuario que ingrese las materias
 for (int dia = 0; dia < 5; dia++) {
 printf("Asignacion de materias para el %s:\n", dias[dia]);
 for (int bloque = 0; bloque < 5; bloque++) {
-printf("  Bloque %d: ", bloque + 1);
-scanf("%3s", horario[dia][bloque]);
-}
-}
+printf("  Bloque %d:\n ", bloque + 1);
+scanf(" %3s", horario[dia][bloque]);
 
+// Limpiar el búfer de entrada para evitar residuos
+int c;
+while ((c = getchar()) != '\n' && c != EOF);
+}
+}
 // Imprimimos el horario en formato de tabla
 printf("\nHorario Semanal:\n");
 printf("        Lunes   Martes  Miercoles  Jueves  Viernes\n");
@@ -28,3 +31,4 @@ printf("\n");
 
 return 0;
 }
+
