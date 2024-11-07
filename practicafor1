@@ -16,7 +16,7 @@ scanf ("%f", &temperaturas [dia][turno]);
 for (int dia= 0; dia< 7; dia++) {
 suma_diaria= 0;
 for (int turno= 0; turno<3; turno++){
-suma_diaria+= temperaturas [dia][turno];2
+suma_diaria+= temperaturas [dia][turno];
 
 }
 promedio_diario= suma_diaria/3;
