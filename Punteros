@@ -1,0 +1,20 @@
+#include<stdio.h>
+#define ESTUDIANTES 4
+int main(){
+int calificaciones [ESTUDIANTES];
+int *punteros;
+float suma = 0;
+float promedio= 0;
+// Ingreso de datos.
+for(punteros = calificaciones ; punteros < calificaciones+4; punteros ++){
+puts("Escribe la calificacion:");
+scanf("%d", punteros);
+}
+for(punteros = calificaciones ; punteros < calificaciones+4; punteros ++){
+suma+= *punteros;
+}
+promedio = (suma/ 4);
+printf("El promedio de las calificaciones es: %.2f\n", promedio);
+
+return 0;
+}
