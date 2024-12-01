@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+float suma (float a, float b ){
+    return a + b;
+}
+float resta ( float a, float b){
+    return a - b;
+}
+float multipicacion(float a, float b){
+    return a * b; 
+}
+float division (float a, float b){
+    if (b != 0){
+    return a/b;
+    } else {
+printf("Error en la division por cero");
+return 0; 
+    }
+}
+int main(){
+float num1, num2 ;
+char operador;
+printf("Favor de escribir el primer numero: ");
+scanf("%lf", &num1);
+printf("Favor de escribir el segundo numero: ");
+scanf("%lf", &num2);
+printf ("Favor de escribir el operador (+, -, *, /): ");
+scanf (" %c", &operador);
+switch (operador){
+case '+':
+printf ("La suma da como resultado: %.2f\n",suma(num1, num2));
+break;
+case '-':
+printf("La resta da como resultado: %.2f\n", resta(num1, num2));
+break;
+case '*':
+printf("La multiplicacion da como resultado: %.2f\n", multipicacion(num1,num2));
+break;
+case '/':
+printf("La division da como resultado: %.2f\n", division(num1, num2));
+break;
+default:
+printf("Operador invalido");
+return 0;
+}
+}
